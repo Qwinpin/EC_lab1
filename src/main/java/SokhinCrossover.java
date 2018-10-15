@@ -13,7 +13,7 @@ public class SokhinCrossover extends AbstractCrossover<double[]> {
         ArrayList children = new ArrayList();
 
         double tmp;
-        double alpha = 0.2;
+        double alpha = 0.85;
         double[] p3 = p1;
         double[] p4 = p2;
 
@@ -23,6 +23,14 @@ public class SokhinCrossover extends AbstractCrossover<double[]> {
             p1[i] = p1[i] * alpha + p2[i] * (1 - alpha);
             p2[i] = p2[i] * alpha + tmp * (1 - alpha);
         }
+
+//        for (i=0; i < p1.length; i++){
+//            if (i % 2 == 0) {
+//                tmp = p1[i];
+//                p1[i] = alpha*p2[i];
+//                p2[i] = alpha*tmp;
+//            }
+//        }
         // your implementation:
         if (random.nextDouble() > 0.4){
             children.add(p1);

@@ -13,7 +13,7 @@ public class SokhinFactory extends AbstractCandidateFactory<double[]> {
     public double[] generateRandomCandidate(Random random) {
         double[] solution = new double[dimension];
         for (int i = 0; i < dimension; i++){
-            solution[i] = 1.0 + (1.0 + 1.0) * random.nextDouble();
+            solution[i] = (-1.0 + (1.0 + 1.0) * random.nextGaussian())%5.0;
         }
 
         return solution;
