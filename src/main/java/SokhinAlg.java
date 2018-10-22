@@ -10,7 +10,7 @@ import java.util.Random;
 public class SokhinAlg {
 
     public static void main(String[] args) {
-        int dimension = 100; // dimension of problem
+        int dimension = 500; // dimension of problem
         int populationSize = 100; // size of population
         int generations = 100000; // number of generations
 
